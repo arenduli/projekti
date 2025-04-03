@@ -1,6 +1,16 @@
+import repository.GeometrijskiLik;
+
+import java.util.ArrayList;
+
 public class Ucilica {
 
-    public static void main(String[] args) {
+    ArrayList<GeometrijskiLik> likovi;
 
+    Ucilica () {
+        likovi = new ArrayList<>();
+    }
+
+    public ArrayList<GeometrijskiLik> getLikovi() {
+        return likovi;
     }
 }
