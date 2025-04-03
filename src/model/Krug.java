@@ -1,21 +1,13 @@
 package model;
+import repository.GeometrijskiLik;
 
-public class Krug {
+public class Krug extends GeometrijskiLik {
 
-    private String naziv;
     private double polumjer;
 
     public Krug(String naziv, double polumjer) {
-        this.naziv = naziv;
+        super(naziv);
         this.polumjer = polumjer;
-    }
-
-    public String getNaziv() {
-        return naziv;
-    }
-
-    public void setNaziv(String naziv) {
-        this.naziv = naziv;
     }
 
     public double getPolumjer() {
@@ -24,5 +16,15 @@ public class Krug {
 
     public void setPolumjer(double polumjer) {
         this.polumjer = polumjer;
+    }
+
+    @Override
+    public double povrsina() {
+        return (Math.PI * Math.pow(polumjer, 2));
+    }
+
+    @Override
+    public double opseg() {
+        return (2 * Math.PI * polumjer);
     }
 }
